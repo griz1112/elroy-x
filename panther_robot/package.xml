@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <name>panther_robot</name>
+  <version>0.1.0</version>
+  <description>
+	Derived from Panther meta package which provides all the basic drivers for running and using this robot modified for R1 rover using bno055 and sweep lidar
+  </description>
+
+  
+  <maintainer email="griz11@twc.com">Dan Pollock</maintainer>
+
+  <license>BSD</license>
+
+  <url type="repository">https://github.com/griz11/astro</url>
+
+  <author email="raffaello@rnext.it">Raffaello Bonghi</author>
+  <author email="griz11@twc.com">Dan Pollock</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>astro_bringup</run_depend>
+  <run_depend>astro_description</run_depend>
+  <run_depend>astro_control</run_depend>
+  <run_depend>astro_gazebo</run_depend>
+  <run_depend>astro_navigation</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
