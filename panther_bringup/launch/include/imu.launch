@@ -1,0 +1,17 @@
+<launch>
+
+  <!-- Set IMU port -->
+  <arg name="port" default="/dev/ttyACM0" />
+
+  <!-- Run Bosch BNO055 IMU -->
+  <arg name="bosch_config_file" default="$(find bno055_usb_stick)/config/imu_bosch.yaml"/> 
+  <node pkg="bno055_usb_stick" type="bno055_usb_stick_node" name="bno055_usb_stick_node" output="screen">
+    <rosparam file="$(arg bosch_config_file)" command="load"/>
+    <remap from="/imu/data" to="/imu"/>
+   <!-- <remap from="/imu/raw" to="/imu/bosch/raw"/>
+    <remap from="/imu/temp" to="/imu_bosch/temp" />
+    <remap from="/imu_mag" to="/imu/bosch/mag"/>  -->
+    <remap from="output" to="/imu_bosch_output"/> 
+  </node>
+
+</launch>

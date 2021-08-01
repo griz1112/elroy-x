@@ -1,0 +1,17 @@
+<launch>
+
+    <node name="livox_frame_to_base_link"
+      pkg="tf" type="static_transform_publisher"
+      args="0.0 0.0 0.0 0.0 0.0 0.0 livox_frame base_link 200" /> 
+
+    <node name="camera_init_to_map_link"
+      pkg="tf" type="static_transform_publisher"
+      args="0.0 0.0 0.0 0.0 0.0 0.0 map camera_init 200" /> 
+
+    <node name="livox_frame_to_camera_init"
+      pkg="tf" type="static_transform_publisher"
+      args="0.0 0.0 0.0 0.0 0.0 0.0 camera_init livox_frame 200" />
+
+</launch>
+
+

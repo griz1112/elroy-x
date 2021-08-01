@@ -1,0 +1,1230 @@
+... logging to /home/griz/.ros/log/b98e548a-67d5-11ea-bd6b-00044bcb9019/roslaunch-elroy-x-31469.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/griz/panther_ws/src/panther/panther_bringup/launch/bringup.launch
+[1mstarted roslaunch server http://elroy-x:41519/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /diagnostic_aggregator/analyzers/computers/contains: ['Roboteq', 'joint']
+ * /diagnostic_aggregator/analyzers/computers/path: Roboteq
+ * /diagnostic_aggregator/analyzers/computers/type: diagnostic_aggreg...
+ * /enable_odom_tf: False
+ * /panther_joint_publisher/publish_rate: 50
+ * /panther_joint_publisher/type: joint_state_contr...
+ * /panther_velocity_controller/angular/z/has_acceleration_limits: True
+ * /panther_velocity_controller/angular/z/has_velocity_limits: True
+ * /panther_velocity_controller/angular/z/max_acceleration: 9.0
+ * /panther_velocity_controller/angular/z/max_velocity: 10.0
+ * /panther_velocity_controller/base_frame_id: base_link
+ * /panther_velocity_controller/cmd_vel_timeout: 0.25
+ * /panther_velocity_controller/enable_odom_tf: False
+ * /panther_velocity_controller/estimate_velocity_from_position: False
+ * /panther_velocity_controller/left_wheel: lf_wheel_joint
+ * /panther_velocity_controller/linear/x/has_acceleration_limits: True
+ * /panther_velocity_controller/linear/x/has_velocity_limits: True
+ * /panther_velocity_controller/linear/x/max_acceleration: 2.0
+ * /panther_velocity_controller/linear/x/max_velocity: 1.4
+ * /panther_velocity_controller/pose_covariance_diagonal: [0.001, 0.001, 0....
+ * /panther_velocity_controller/publish_rate: 50
+ * /panther_velocity_controller/right_wheel: rf_wheel_joint
+ * /panther_velocity_controller/twist_covariance_diagonal: [0.001, 0.001, 0....
+ * /panther_velocity_controller/type: diff_drive_contro...
+ * /panther_velocity_controller/wheel_radius_multiplier: 1
+ * /panther_velocity_controller/wheel_separation_multiplier: 1
+ * /robot_description: <?xml version="1....
+ * /roboteq/InOut/analog/1/conversion: 0
+ * /roboteq/InOut/analog/1/conversion_polarity: 0
+ * /roboteq/InOut/analog/1/input_deadband: 5
+ * /roboteq/InOut/analog/1/input_motor_one: 0
+ * /roboteq/InOut/analog/1/input_motor_two: 0
+ * /roboteq/InOut/analog/1/input_use: 0
+ * /roboteq/InOut/analog/1/range_input_center: 2.5
+ * /roboteq/InOut/analog/1/range_input_max: 4.75
+ * /roboteq/InOut/analog/1/range_input_min: 0.25
+ * /roboteq/InOut/analog/2/conversion: 0
+ * /roboteq/InOut/analog/2/conversion_polarity: 0
+ * /roboteq/InOut/analog/2/input_deadband: 5
+ * /roboteq/InOut/analog/2/input_motor_one: 0
+ * /roboteq/InOut/analog/2/input_motor_two: 0
+ * /roboteq/InOut/analog/2/input_use: 0
+ * /roboteq/InOut/analog/2/range_input_center: 2.5
+ * /roboteq/InOut/analog/2/range_input_max: 4.75
+ * /roboteq/InOut/analog/2/range_input_min: 0.25
+ * /roboteq/InOut/analog/3/conversion: 0
+ * /roboteq/InOut/analog/3/conversion_polarity: 0
+ * /roboteq/InOut/analog/3/input_deadband: 5
+ * /roboteq/InOut/analog/3/input_motor_one: 0
+ * /roboteq/InOut/analog/3/input_motor_two: 0
+ * /roboteq/InOut/analog/3/input_use: 0
+ * /roboteq/InOut/analog/3/range_input_center: 2.5
+ * /roboteq/InOut/analog/3/range_input_max: 4.75
+ * /roboteq/InOut/analog/3/range_input_min: 0.25
+ * /roboteq/InOut/analog/4/conversion: 0
+ * /roboteq/InOut/analog/4/conversion_polarity: 0
+ * /roboteq/InOut/analog/4/input_deadband: 5
+ * /roboteq/InOut/analog/4/input_motor_one: 0
+ * /roboteq/InOut/analog/4/input_motor_two: 0
+ * /roboteq/InOut/analog/4/input_use: 0
+ * /roboteq/InOut/analog/4/range_input_center: 2.5
+ * /roboteq/InOut/analog/4/range_input_max: 4.75
+ * /roboteq/InOut/analog/4/range_input_min: 0.25
+ * /roboteq/InOut/analog/5/conversion: 0
+ * /roboteq/InOut/analog/5/conversion_polarity: 0
+ * /roboteq/InOut/analog/5/input_deadband: 0
+ * /roboteq/InOut/analog/5/input_motor_one: 0
+ * /roboteq/InOut/analog/5/input_motor_two: 0
+ * /roboteq/InOut/analog/5/input_use: 0
+ * /roboteq/InOut/analog/5/range_input_center: 0.0
+ * /roboteq/InOut/analog/5/range_input_max: 0.0
+ * /roboteq/InOut/analog/5/range_input_min: 0.0
+ * /roboteq/InOut/analog/6/conversion: 0
+ * /roboteq/InOut/analog/6/conversion_polarity: 0
+ * /roboteq/InOut/analog/6/input_deadband: 0
+ * /roboteq/InOut/analog/6/input_motor_one: 0
+ * /roboteq/InOut/analog/6/input_motor_two: 0
+ * /roboteq/InOut/analog/6/input_use: 0
+ * /roboteq/InOut/analog/6/range_input_center: 0.0
+ * /roboteq/InOut/analog/6/range_input_max: 0.0
+ * /roboteq/InOut/analog/6/range_input_min: 0.0
+ * /roboteq/InOut/encoder/1/PPR: 611
+ * /roboteq/InOut/encoder/1/configuration: 2
+ * /roboteq/InOut/encoder/1/encoder_high_count_limit: 20000
+ * /roboteq/InOut/encoder/1/encoder_home_count: 0
+ * /roboteq/InOut/encoder/1/encoder_low_count_limit: -20000
+ * /roboteq/InOut/encoder/1/input_motor_one: 1
+ * /roboteq/InOut/encoder/1/input_motor_two: 0
+ * /roboteq/InOut/encoder/1/position: 1
+ * /roboteq/InOut/encoder/2/PPR: 611
+ * /roboteq/InOut/encoder/2/configuration: 2
+ * /roboteq/InOut/encoder/2/encoder_high_count_limit: 20000
+ * /roboteq/InOut/encoder/2/encoder_home_count: 0
+ * /roboteq/InOut/encoder/2/encoder_low_count_limit: -20000
+ * /roboteq/InOut/encoder/2/input_motor_one: 0
+ * /roboteq/InOut/encoder/2/input_motor_two: 1
+ * /roboteq/InOut/encoder/2/position: 1
+ * /roboteq/InOut/pulse/1/conversion: 1
+ * /roboteq/InOut/pulse/1/conversion_polarity: 0
+ * /roboteq/InOut/pulse/1/input_deadband: 5
+ * /roboteq/InOut/pulse/1/input_motor_one: 1
+ * /roboteq/InOut/pulse/1/input_motor_two: 0
+ * /roboteq/InOut/pulse/1/input_use: 1
+ * /roboteq/InOut/pulse/1/range_input_center: 1.5
+ * /roboteq/InOut/pulse/1/range_input_max: 2.0
+ * /roboteq/InOut/pulse/1/range_input_min: 1.0
+ * /roboteq/InOut/pulse/2/conversion: 1
+ * /roboteq/InOut/pulse/2/conversion_polarity: 0
+ * /roboteq/InOut/pulse/2/input_deadband: 5
+ * /roboteq/InOut/pulse/2/input_motor_one: 0
+ * /roboteq/InOut/pulse/2/input_motor_two: 1
+ * /roboteq/InOut/pulse/2/input_use: 1
+ * /roboteq/InOut/pulse/2/range_input_center: 1.5
+ * /roboteq/InOut/pulse/2/range_input_max: 2.0
+ * /roboteq/InOut/pulse/2/range_input_min: 1.0
+ * /roboteq/InOut/pulse/3/conversion: 0
+ * /roboteq/InOut/pulse/3/conversion_polarity: 0
+ * /roboteq/InOut/pulse/3/input_deadband: 5
+ * /roboteq/InOut/pulse/3/input_motor_one: 0
+ * /roboteq/InOut/pulse/3/input_motor_two: 0
+ * /roboteq/InOut/pulse/3/input_use: 0
+ * /roboteq/InOut/pulse/3/range_input_center: 1.5
+ * /roboteq/InOut/pulse/3/range_input_max: 2.0
+ * /roboteq/InOut/pulse/3/range_input_min: 1.0
+ * /roboteq/InOut/pulse/4/conversion: 0
+ * /roboteq/InOut/pulse/4/conversion_polarity: 0
+ * /roboteq/InOut/pulse/4/input_deadband: 5
+ * /roboteq/InOut/pulse/4/input_motor_one: 0
+ * /roboteq/InOut/pulse/4/input_motor_two: 0
+ * /roboteq/InOut/pulse/4/input_use: 0
+ * /roboteq/InOut/pulse/4/range_input_center: 1.5
+ * /roboteq/InOut/pulse/4/range_input_max: 2.0
+ * /roboteq/InOut/pulse/4/range_input_min: 1.0
+ * /roboteq/InOut/pulse/5/conversion: 0
+ * /roboteq/InOut/pulse/5/conversion_polarity: 0
+ * /roboteq/InOut/pulse/5/input_deadband: 5
+ * /roboteq/InOut/pulse/5/input_motor_one: 0
+ * /roboteq/InOut/pulse/5/input_motor_two: 0
+ * /roboteq/InOut/pulse/5/input_use: 0
+ * /roboteq/InOut/pulse/5/range_input_center: 1.5
+ * /roboteq/InOut/pulse/5/range_input_max: 2.0
+ * /roboteq/InOut/pulse/5/range_input_min: 1.0
+ * /roboteq/InOut/pulse/6/conversion: 0
+ * /roboteq/InOut/pulse/6/conversion_polarity: 0
+ * /roboteq/InOut/pulse/6/input_deadband: 0
+ * /roboteq/InOut/pulse/6/input_motor_one: 0
+ * /roboteq/InOut/pulse/6/input_motor_two: 0
+ * /roboteq/InOut/pulse/6/input_use: 0
+ * /roboteq/InOut/pulse/6/range_input_center: 0.0
+ * /roboteq/InOut/pulse/6/range_input_max: 0.0
+ * /roboteq/InOut/pulse/6/range_input_min: 0.0
+ * /roboteq/break_delay: 250
+ * /roboteq/control_frequency: 50.0
+ * /roboteq/diagnostic_frequency: 5.0
+ * /roboteq/joint: ['lf_wheel_joint'...
+ * /roboteq/lf_wheel_joint/amper_limit: 20.0
+ * /roboteq/lf_wheel_joint/max_acceleration: 500.0
+ * /roboteq/lf_wheel_joint/max_deceleration: 400.0
+ * /roboteq/lf_wheel_joint/max_forward: 100
+ * /roboteq/lf_wheel_joint/max_reverse: 100
+ * /roboteq/lf_wheel_joint/max_speed: 165.0
+ * /roboteq/lf_wheel_joint/number: 1
+ * /roboteq/lf_wheel_joint/pid/closed_loop_position: 2
+ * /roboteq/lf_wheel_joint/pid/closed_loop_velocity: 6
+ * /roboteq/lf_wheel_joint/pid/position/Kd: 0.0
+ * /roboteq/lf_wheel_joint/pid/position/Ki: 2.0
+ * /roboteq/lf_wheel_joint/pid/position/Kp: 2.0
+ * /roboteq/lf_wheel_joint/pid/position/integrator_limit: 100
+ * /roboteq/lf_wheel_joint/pid/position/loop_error_detection: 2
+ * /roboteq/lf_wheel_joint/pid/position/position_mode_velocity: 0
+ * /roboteq/lf_wheel_joint/pid/position/turn_min_to_max: 0.0
+ * /roboteq/lf_wheel_joint/pid/torque/Kd: 0.0
+ * /roboteq/lf_wheel_joint/pid/torque/Ki: 2.0
+ * /roboteq/lf_wheel_joint/pid/torque/Kp: 2.0
+ * /roboteq/lf_wheel_joint/pid/torque/integrator_limit: 100
+ * /roboteq/lf_wheel_joint/pid/torque/loop_error_detection: 2
+ * /roboteq/lf_wheel_joint/pid/torque/position_mode_velocity: 0
+ * /roboteq/lf_wheel_joint/pid/torque/turn_min_to_max: 0.0
+ * /roboteq/lf_wheel_joint/pid/velocity/Kd: 0.0
+ * /roboteq/lf_wheel_joint/pid/velocity/Ki: 2.0
+ * /roboteq/lf_wheel_joint/pid/velocity/Kp: 2.0
+ * /roboteq/lf_wheel_joint/pid/velocity/integrator_limit: 100
+ * /roboteq/lf_wheel_joint/pid/velocity/loop_error_detection: 2
+ * /roboteq/lf_wheel_joint/pid/velocity/position_mode_velocity: 1000
+ * /roboteq/lf_wheel_joint/pid/velocity/turn_min_to_max: 1.0
+ * /roboteq/lf_wheel_joint/ratio: 51.0
+ * /roboteq/lf_wheel_joint/rotation: 1
+ * /roboteq/lf_wheel_joint/stall_detection: 2
+ * /roboteq/mixing: 0
+ * /roboteq/over_voltage_hysteresis: 5.0
+ * /roboteq/over_voltage_limit: 30.0
+ * /roboteq/pwm_frequency: 16.0
+ * /roboteq/rf_wheel_joint/amper_limit: 20.0
+ * /roboteq/rf_wheel_joint/max_acceleration: 500.0
+ * /roboteq/rf_wheel_joint/max_deceleration: 400.0
+ * /roboteq/rf_wheel_joint/max_forward: 100
+ * /roboteq/rf_wheel_joint/max_reverse: 100
+ * /roboteq/rf_wheel_joint/max_speed: 165.0
+ * /roboteq/rf_wheel_joint/number: 2
+ * /roboteq/rf_wheel_joint/pid/closed_loop_position: 2
+ * /roboteq/rf_wheel_joint/pid/closed_loop_velocity: 6
+ * /roboteq/rf_wheel_joint/pid/position/Kd: 0.0
+ * /roboteq/rf_wheel_joint/pid/position/Ki: 2.0
+ * /roboteq/rf_wheel_joint/pid/position/Kp: 2.0
+ * /roboteq/rf_wheel_joint/pid/position/integrator_limit: 100
+ * /roboteq/rf_wheel_joint/pid/position/loop_error_detection: 2
+ * /roboteq/rf_wheel_joint/pid/position/position_mode_velocity: 0
+ * /roboteq/rf_wheel_joint/pid/position/turn_min_to_max: 0.0
+ * /roboteq/rf_wheel_joint/pid/torque/Kd: 0.0
+ * /roboteq/rf_wheel_joint/pid/torque/Ki: 2.0
+ * /roboteq/rf_wheel_joint/pid/torque/Kp: 2.0
+ * /roboteq/rf_wheel_joint/pid/torque/integrator_limit: 100
+ * /roboteq/rf_wheel_joint/pid/torque/loop_error_detection: 2
+ * /roboteq/rf_wheel_joint/pid/torque/position_mode_velocity: 0
+ * /roboteq/rf_wheel_joint/pid/torque/turn_min_to_max: 0.0
+ * /roboteq/rf_wheel_joint/pid/velocity/Kd: 0.0
+ * /roboteq/rf_wheel_joint/pid/velocity/Ki: 2.0
+ * /roboteq/rf_wheel_joint/pid/velocity/Kp: 2.0
+ * /roboteq/rf_wheel_joint/pid/velocity/integrator_limit: 100
+ * /roboteq/rf_wheel_joint/pid/velocity/loop_error_detection: 2
+ * /roboteq/rf_wheel_joint/pid/velocity/position_mode_velocity: 1000
+ * /roboteq/rf_wheel_joint/pid/velocity/turn_min_to_max: 1.0
+ * /roboteq/rf_wheel_joint/ratio: 51.0
+ * /roboteq/rf_wheel_joint/rotation: 1
+ * /roboteq/rf_wheel_joint/stall_detection: 2
+ * /roboteq/serial_port: /dev/ttyACM0
+ * /roboteq/serial_rate: 115200
+ * /roboteq/under_voltage_limit: 5.0
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+ * /twist_mux/locks: [{'topic': 'e_sto...
+ * /twist_mux/topics: [{'topic': 'joy_t...
+
+NODES
+  /
+    base_controller_spawner (controller_manager/spawner)
+    diagnostic_aggregator (diagnostic_aggregator/aggregator_node)
+    panther_state_publisher (robot_state_publisher/robot_state_publisher)
+    roboteq (roboteq_control/driver_node)
+    twist_mux (twist_mux/twist_mux)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/griz/panther_ws/src/panther/panther_bringup/launch/bringup.launch http://localhost:11311
+[1mprocess[panther_state_publisher-1]: started with pid [31505][0m
+[1mprocess[roboteq-2]: started with pid [31506][0m
+[1mpr[0m[ INFO] [1584399208.757396443]: ----------------------------------------[0m
+[0m[ INFO] [1584399208.760899275]: ------------- ROBOTEQ_NODE -------------[0m
+[0m[ INFO] [1584399208.766242856]: Control:50Hz - Diagnostic:5Hz[0m
+[0m[ INFO] [1584399208.771941627]: Open Serial /dev/ttyACM0:115200[0m
+[0m[ INFO] [1584399208.780339469]: Other message ?8[0m
+[0m[ INFO] [1584399208.780532857]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.780681794]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.780813865]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.780965138]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.781088922]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.781210753]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.782697401]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.790526602]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.797382817]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.806266225]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.816189342]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.824112596]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.836418319]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.846128079]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.856112960]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.866185302]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.874135470]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.886124342]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.896218414]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.906134778]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.916149645]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.924086148]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.936069260]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.946136161]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.956034445]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.966061217]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.974120863]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.986110023]: Other message 
+?8[0m
+[0m[ INFO] [1584399208.996186909]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.006196848]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.016151359]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.024145657]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.036154530]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.046094032]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.056085858]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.066116533]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.074121777]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.086079254]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.096091529]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.106132573]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.116107565]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.124112681]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.136112305]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.146235690]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.156128918]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.166139944]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.174047421]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.186097353]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.196164671]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.206120078]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.216141217]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.224117082]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.236103426]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.246111540]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.256103205]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.266071317]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.274069200]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.286099034]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.296062730]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.306093438]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.316131186]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.324130572]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.336072050]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.346118022]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.356162362]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.366168428]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.374133797]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.386077835]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.396052123]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.406045196]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.416096161]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.424039416]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.436058338]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.446043571]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.456133962]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.466092729]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.474162008]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.486121599]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.496138801]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.506087104]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.516111219]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.524074892]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.536077621]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.546106632]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.556064503]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.566064105]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.574107623]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.586118320]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.596077727]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.606107763]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.616105156]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.624095487]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.636053605]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.646084088]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.656098283]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.666053178]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.674062517]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.686094240]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.696178902]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.706156583]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.716127799]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.724081935]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.736111321]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.746115563]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.756102076]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.766097646]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.774138859]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.786201879]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.796102531]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.806111510]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.816123080]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.824067936]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.836090506]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.846194721]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.856132784]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.866106624]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.874218785]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.886183144]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.896085396]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.906095046]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.916145179]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.924134645]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.936089563]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.946042634]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.956085406]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.966129970]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.974138574]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.986152023]: Other message 
+?8[0m
+[0m[ INFO] [1584399209.996112903]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.006074710]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.016089705]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.024081059]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.036154640]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.046084926]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.056108305]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.066355153]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.074142303]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.086135400]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.096104663]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.106098793]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.116125596]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.124147480]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.136127552]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.146137010]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.156123267]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.166156631]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.174168210]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.186096663]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.196144779]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.206154749]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.216201714]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.224199789]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.236166195]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.246104193]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.256154518]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.266116229]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.274108384]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.286126794]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.296143548]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.306124269]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.316198019]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.324185373]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.336168421]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.346192888]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.356153671]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.366167162]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.374149524]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.386236545]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.396165007]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.406132735]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.416117231]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.424138092]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.436196984]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.446103908]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.456093109]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.466185260]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.474081089]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.486103051]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.496145343]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.506143024]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.516191205]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.524139741]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.536157222]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.546171385]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.556184460]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.566203902]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.574164503]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.586229475]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.596122255]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.606170883]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.616141715]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.624226995]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.636202650]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.646122887]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.656184349]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.666181102]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.674168297]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.686150960]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.696191268]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.706187414]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.716159654]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.724198051]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.736191691]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.746178876]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.756396955]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.766273701]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.774241118]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.786304106]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.796242648]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.807179266]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.816199257]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.824240695]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.836211453]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.847312657]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.856250627]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.867157643]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.874244112]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.886226007]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.896170821]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.906356706]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.916228748]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.924231143]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.936202670]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.946265636]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.956241812]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.966169569]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.974159676]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.986200871]: Other message 
+?8[0m
+[0m[ INFO] [1584399210.996117299]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.006195818]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.016163418]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.024139635]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.036204832]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.046137837]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.056153088]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.066236118]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.074270996]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.087306169]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.096182152]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.106232765]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.116205741]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.124148421]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.137200428]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.146128222]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.156124239]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.166230151]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.174222530]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.187161090]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.196169017]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.206197420]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.216177021]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.224186072]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.237177243]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.247295540]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.256149666]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.267221107]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.274191825]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.287180404]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.297238729]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.307204153]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.317259118]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.324175561]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.337224399]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.347259523]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.357226963]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.367225733]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.374229252]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.387189670]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.397217721]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.407257645]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.417158777]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.424194011]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.437281092]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.447272885]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.457238341]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.467218741]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.474199988]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.487288381]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.497181224]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.507210396]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.517203053]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.524184075]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.537212817]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.547219779]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.557192819]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.567282154]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.574187748]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.587245707]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.597216027]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.607226830]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.617232608]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.624226175]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.637201889]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.647334683]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.657249032]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.667203671]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.674197014]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.687232124]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.697218573]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.707201597]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.717159789]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.724190094]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.737231476]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.747277449]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.757280059]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.767226409]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.774285740]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.787202283]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.797204125]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.807367480]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.817240258]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.824406060]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.837281000]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.847225015]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.857268651]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.867264348]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.874278845]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.887365094]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.897228271]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.907255683]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.917237779]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.924191792]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.937209909]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.947282411]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.957285341]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.967354419]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.974322865]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.987240816]: Other message 
+?8[0m
+[0m[ INFO] [1584399211.997240833]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.007261492]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.017254117]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.024239236]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.037238792]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.047374530]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.057263437]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.067269951]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.074244253]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.087230464]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.097246355]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.107254181]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.117218580]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.124261526]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.137207735]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.147224042]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.156252802]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.167231726]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.174222445]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.187267443]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.197264389]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.207426432]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.217281161]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.224260903]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.237270124]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.247209498]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.257285200]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.267241439]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.274269952]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.287392491]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.297239252]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.307268328]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.317275226]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.324260184]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.337248443]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.347331186]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.357354629]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.367404666]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.374259217]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.387280406]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.397283752]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.407281497]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.417243785]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.424322637]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.437246924]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.447387846]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.457286034]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.467276227]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.474288771]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.487640220]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.497311162]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.507262409]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.517284828]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.524226072]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.537342627]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.547255471]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.557198622]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.567301718]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.574246642]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.587263159]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.597223750]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.607442405]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.617241483]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.624223625]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.637311026]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.647298467]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.657294420]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.667293862]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.674284453]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.687366638]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.697235736]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.707253162]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.717268957]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.724236187]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.737232126]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.737448779]: Other message [0m
+[0m[ INFO] [1584399212.747277139]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.757266436]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.767420063]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.774268597]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.787279130]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.797241673]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.807311071]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.817312305]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.824271086]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.837346006]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.847405099]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.857294710]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.867328298]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.874380557]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.887277322]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.897314910]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.907338642]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.917302177]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.924296096]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.937382313]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.947291670]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.957340138]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.967302362]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.974296665]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.987324382]: Other message 
+?8[0m
+[0m[ INFO] [1584399212.997291246]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.010104807]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.017302226]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.024313586]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.037339608]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.047315272]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.057311001]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.067382895]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.074274856]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.087418069]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.097255389]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.107269199]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.117257440]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.124290978]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.137263460]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.147276950]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.157381518]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.167398625]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.174271609]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.187340193]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.197270734]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.207269152]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.217349142]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.224322004]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.237284374]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.247378381]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.257378303]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.267319821]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.274393393]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.287321425]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.297334179]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.307252784]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.317312837]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.324367624]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.337293863]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.347307898]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.357336749]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.367343263]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.374325758]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.387357188]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.397324019]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.407475726]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.417367481]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.424406523]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.437383326]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.447323820]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.457362432]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.467397683]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.474338671]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.487440729]: Other message 
+?8[0m
+[0m[ INFO] [1584399213.497283106]: Other message 
+?8ocess[base_controller_spawner-3]: started with pid [31508][0m
+[1mprocess[twist_mux-4]: started with pid [31517][0m
+[1mprocess[diagnostic_aggregator-5]: started with pid [31519][0m
+[1m[base_controller_spawner-3] process has finished cleanly
+log file: /home/griz/.ros/log/b98e548a-67d5-11ea-bd6b-00044bcb9019/base_controller_spawner-3*.log[0m
+[diagnostic_aggregator-5] killing on exit
+[twist_mux-4] killing on exit
+[panther_state_publisher-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

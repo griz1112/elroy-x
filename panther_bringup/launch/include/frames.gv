@@ -1,0 +1,27 @@
+digraph G {
+"left_tub_support_link" -> "left_front_bearing_block_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "left_tub_support_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"left_front_bearing_block_link" -> "left_front_outrigger_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"left_tub_support_link" -> "left_rear_bearing_block_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"left_rear_bearing_block_link" -> "left_rear_outrigger_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /zed/zed_wrapper_node\nAverage rate: 30.204 Hz\nMost recent transform: 1543376992.417 ( 0.085 sec old)\nBuffer length: 4.900 sec\n"];
+"right_tub_support_link" -> "right_front_bearing_block_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "right_tub_support_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"right_front_bearing_block_link" -> "right_front_outrigger_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"right_tub_support_link" -> "right_rear_bearing_block_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"right_rear_bearing_block_link" -> "right_rear_outrigger_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "mast_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"zed_camera_center" -> "zed_left_camera_frame"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"mast_link" -> "zed_camera_center"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"zed_left_camera_frame" -> "zed_left_camera_optical_frame"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"zed_camera_center" -> "zed_right_camera_frame"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"zed_right_camera_frame" -> "zed_right_camera_optical_frame"[label="Broadcaster: /astro_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1543376992.501 sec old)\nBuffer length: 0.000 sec\n"];
+"map" -> "odom"[label="Broadcaster: /zed/zed_wrapper_node\nAverage rate: 30.204 Hz\nMost recent transform: 1543376992.417 ( 0.085 sec old)\nBuffer length: 4.900 sec\n"];
+"left_front_outrigger_link" -> "lf_wheel_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 20.268 Hz\nMost recent transform: 1543376992.462 ( 0.039 sec old)\nBuffer length: 4.885 sec\n"];
+"right_front_outrigger_link" -> "rf_wheel_link"[label="Broadcaster: /astro_state_publisher\nAverage rate: 20.268 Hz\nMost recent transform: 1543376992.462 ( 0.039 sec old)\nBuffer length: 4.885 sec\n"];
+"base_link" -> "imu_bosch_link"[label="Broadcaster: /base_link_to_imu_bosch\nAverage rate: 5.202 Hz\nMost recent transform: 1543376992.641 ( -0.140 sec old)\nBuffer length: 4.806 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1543376992.501"[ shape=plaintext ] ;
+ }->"map";
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!--
+Copyright (C) 2017, Raffaello Bonghi <raffaello@rnext.it>
+All rights reserved
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright 
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its 
+   contributors may be used to endorse or promote products derived 
+   from this software without specific prior written permission.
+ 
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND 
+CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, 
+BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE 
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<launch>
+  <!-- Launch the ZED wrapper node -->
+  <arg name="zed"          default="false"  />
+  <!-- Launch the Livox Lidar wrapper node -->
+  <arg name="livox"	      default="false" />
+  <!-- Launch web controller       -->
+  <arg name="web"          default="false" />
+  <!-- Enable/disable 2D mode -->
+  <arg name="two_d_mode"   default="false" />
+  <!-- Enable/Disable sensor fusion -->
+  <arg name="filter"       default="false" />
+  <!-- Enable/disable IMU -->
+  <arg name="imu"	         default="false" />
+  <!-- Provide Loam -->
+  <arg name="loam"         default="false" />
+  <!-- Provide Octomap -->
+  <arg name="octomap"      default="false" />
+  <!-- Livox Navigation -->
+  <arg name="liv_nav"      default="false" />
+  <!-- Zed/Rtabmap Navigation -->
+  <arg name="zed_nav"      default="false" />
+  <!-- Tethered Mode -->
+  <arg name="tethered"     default="false" />
+  
+  <!-- USB port selection -->
+
+  <arg name="ttyMOTOR"     default="/dev/roboteq" />
+  <arg name="ttyIMU"       default="/dev/razor" /> 
+
+  <!--  Load Livox lidar driver -->
+  <group if="$(arg livox)">
+	  <include file="$(find livox_ros_driver)/launch/livox_lidar.launch">
+  </include>
+  </group>
+
+  <!-- Load Livox Loam -->
+  <group if="$(arg loam)" >
+  <include file="$(find loam_livox)/launch/livox.launch" >
+  </include>  
+  </group>
+
+  <!-- Load Octomap -->
+  <group if="$(arg octomap)" >
+  <include file="$(find panther_navigation)/launch/octo.launch" >
+  </include>
+  </group>
+
+  <!-- Load motor control hardware interface -->
+  <include file="$(find panther_bringup)/launch/include/driver.launch">
+    <!-- Set TTY motor controller -->
+    <!-- <arg name="port"             value="$(arg ttyMOTOR)" /> -->
+  </include>
+
+  <!-- Launch IMU sensor  -->
+  <group if="$(arg imu)">
+     <include file="$(find panther_bringup)/launch/include/imu.launch"> 
+        <arg name="port"             value="$(arg ttyIMU)"   />
+     </include> 
+  </group> 
+
+  <!-- Start ZED camera and laser scan -->
+  <group if="$(arg zed)">
+    <include file="$(find panther_bringup)/launch/include/zed.launch">
+	    <!-- Enable/Disable odometry TF from ZED -->
+	    <!-- <arg name="publish_tf"     value="false" /> --> 
+    </include>
+  </group>
+
+  <!-- Load controller -->
+  <include file="$(find panther_control)/launch/control.launch">
+     <!-- Publish odom TF from motor controller -->
+       <arg name="enable_odom_tf"     value="false" />
+     <!-- Launch filter externally. See below -->
+       <arg name="filter"             value="false" />
+  </include>
+  
+  <!-- Load Sensor fusion filter -->
+  <group if="$(arg filter)">
+    <include file="$(find panther_control)/launch/localization.launch"> 
+      <!-- Enable/Disable 2D mode -->
+      <arg name="two_d_mode" value="$(arg two_d_mode)" />
+    </include>
+  </group> 
+  
+  <!-- Launch diagnostic aggregator -->
+  <include file="$(find panther_bringup)/launch/include/diagnostic.launch" />
+
+  
+  <!-- Launch web controller -->
+  <group if="$(arg web)">
+    <include file="$(find panther_control)/launch/web.launch" />
+  </group>
+
+
+  <!-- Launch Livox Localization Navigation and Move_Base -->
+  <group if="$(arg liv_nav)">
+    <include file="$(find panther_navigation)/launch/livox_nav.launch" />
+  </group>
+
+  <group if="$(arg zed_nav)">
+    <include file="$(find panther_navigation)/launch/zed_nav.launch" />
+  </group>
+
+  <group if="$(arg tethered)">
+	  <include file="$(find teleop_twist_joy)/launch/teleop.launch">
+  </include>
+  </group>
+
+
+</launch>
